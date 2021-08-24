@@ -53,19 +53,19 @@ function App() {
         isOpen={isEditAvatarPopupOpen}
         onClose={closeAllPopups}
         title="Обновить аватар"
-        name="edit-avatar"
+        name="avatar-edit"
         buttonName="Сохранить"
       >
         <input
-          className="popup__name popup__input"
+          className="popup__input"
           type="url"
-          name="avatar"
+          name="link"
           required
           placeholder="Ссылка на фотографию"
         />
         <span
-          id="avatar-error"
-          className="error"
+          id="name-input-error"
+          className="popup__field-error popup__name-error"
         >
         </span>
       </PopupWithForm>
@@ -79,69 +79,69 @@ function App() {
       >
         <input
           required
-          name="place-name"
+          name="name"
           type="text"
-          className="popup-new-place__description popup__input popup__name"
+          className="popup__input"
           placeholder="Название"
           minLength="2"
           maxLength="30"
         />
         <span
-          id="place-name-error"
-          className="error">
+          id="card-name-input-error"
+          className="popup__field-error popup__name-add-error">
         </span>
         <input
           required
-          name="place-link"
+          name="link"
           type="url"
-          className="popup-new-place__image-link popup__input popup__job"
+          className="popup__input"
           placeholder="Ссылка на картинку"
         />
         <span
-          id="place-link-error"
-          className="error">
+          id="card-link-input-error"
+          className="popup__field-error popup__link-add-error">
         </span>
       </PopupWithForm>
 
       <PopupWithForm
         isOpen={isEditProfilePopupOpen}
         onClose={closeAllPopups}
-        name="edit-profile"
+        name="edit"
         title="Редактировать профиль"
         buttonName="Сохранить"
       >
         <input
           required
-          name="profile-name"
+          name="name"
           type="text"
-          className="popup__name popup__input"
+          className="popup__input"
           placeholder="Имя"
           minLength="2"
           maxLength="40"
         />
         <span
-          id="profile-name-error"
-          className="error">
+          id="name-input-error"
+          className="popup__field-error popup__name-error">
         </span>
         <input
           required
-          name="profile-job"
+          name="about"
           type="text"
-          className="popup__job popup__input"
+          className="popup__input"
           placeholder="О себе"
           minLength="2"
           maxLength="200"
         />
         <span
-          id="profile-job-error"
-          className="error">
+          id="profession-input-error"
+          className="popup__field-error popup__profession-error">
         </span>
 
       </PopupWithForm>
 
       <PopupWithForm
         onClose={closeAllPopups}
-        name="confirm-delete"
+        name="confirm"
         title="Вы уверены?"
         buttonName="Да"
       >
