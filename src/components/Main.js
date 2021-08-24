@@ -18,7 +18,7 @@ function Main({onEditAvatarPopupOpen, onEditProfilePopupOpen, onAddPlacePopupOpe
         setUserAvatar(res.avatar);
       })
       .catch((err) => console.log(err));
-    api.getCards()
+    api.getInitialCards()
       .then(res => {
         setCards(res);
       })
