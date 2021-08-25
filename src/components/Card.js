@@ -9,7 +9,7 @@ function Card({card, onCardClick}) {
   return (
     <div className="element">
       <button type="button" className="element__delete" aria-label="Кнопка удаления карточки"></button>
-      <img className="element__image" src={card.link} alt="Фотография" onClick={handleCardClick}/>
+      <img className="element__image" src={card.link} alt={card.name} onClick={handleCardClick}/>
       <div className="element__group">
         <h2 className="element__title">{card.name}</h2>
         <div className="element__group_like">
